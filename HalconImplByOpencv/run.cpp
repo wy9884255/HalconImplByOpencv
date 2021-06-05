@@ -4,6 +4,12 @@
 #include "ImageEnhance.h"
 #include "ImageWriter.h"
 
+#ifdef _DEBUG
+#pragma comment(lib,"..\\ThirdParty\\opencv\\lib\\opencv_world450d.lib")
+#else
+#pragma comment(lib,"..\\ThirdParty\\opencv\\lib\\opencv_world450.lib")
+#endif
+
 int main()
 {
     std::string output_str = "F://res.png";

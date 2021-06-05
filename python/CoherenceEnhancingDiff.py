@@ -29,7 +29,6 @@ def coherence_filter(img, sigma = 11, str_sigma = 11, blend = 0.5, iter_n = 4):
         dil = cv2.dilate(img, s)
         img1 = ero
         img1[m] = dil[m]
-        cv2.imwrite("F://test.png", img1)
         temp = img*(1.0 - blend) + img1*blend
         img = np.uint8(img*(1.0 - blend) + img1*blend)
     print('done')
